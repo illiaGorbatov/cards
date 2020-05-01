@@ -18,7 +18,7 @@ const Link = styled(NavLink)`
   font-weight: bold;
   font-size: 15px;
   text-transform: uppercase;
-  transition: 0.6s;
+  transition: 0.3s;
   height: 60px;
   line-height: 60px;
   &:hover{
