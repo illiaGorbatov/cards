@@ -1,13 +1,12 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import {NavLink} from "react-router-dom";
 
 const HeaderWrapper = styled.div`
-  width: 100%;
+  max-width: 1082px;
   margin: auto;
   display: flex;
   flex-grow: 0;
-  overflow: hidden;
 `;
 
 const Link = styled(NavLink)`
@@ -15,40 +14,42 @@ const Link = styled(NavLink)`
   text-align: center;
   padding: 20px 10px;
   text-decoration: none;
-  color: white;
+  color: grey;
   font-weight: bold;
-  transition: transform 0.6s;
-  height: 100px;
-  line-height: 100px;
-  &:nth-child(1){
-    background-color: #29363B
-  };
-  &:nth-child(2){
-    background-color: #EA495F
-  };
-  &:nth-child(3){
-    background-color: #F4837D
-  };
-  &:nth-child(4){
-    background-color: #FDCEA9
-  };
-  &:nth-child(5){
-    background-color: #99B998
-  };
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: 0.6s;
+  height: 60px;
+  line-height: 60px;
   &:hover{
-    transform: scale(1.1);
-    z-index: 2;
+    color: white;
+    font-size: 16px;
+      &:nth-child(1){
+        background-color: #29363B
+      };
+      &:nth-child(2){
+        background-color: #EA495F
+      };
+      &:nth-child(3){
+        background-color: #F4837D
+      };
+      &:nth-child(4){
+        background-color: #FDCEA9
+      };
+      &:nth-child(5){
+        background-color: #99B998
+      };
   }
 `;
 
 const Header = () => {
     return (
         <HeaderWrapper>
-            <Link to='/registration' >Registration</Link>
-            <Link to='/authorisation' >Authorisation</Link>
-            <Link to='/recovery' >Password recovery</Link>
-            <Link to='/new-password' >Set new password</Link>
-            <Link to='/profile' >Profile</Link>
+            <Link to='/registration'>Registration</Link>
+            <Link to='/authorisation'>Authorisation</Link>
+            <Link to='/recovery'>Password recovery</Link>
+            <Link to='/new-password'>Set new password</Link>
+            <Link to='/profile'>Profile</Link>
         </HeaderWrapper>
     )
 };

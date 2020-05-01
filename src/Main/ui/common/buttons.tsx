@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const ButtonWrapper = styled.button<{inputColor: string}>`
   position: relative;
@@ -9,7 +9,7 @@ const ButtonWrapper = styled.button<{inputColor: string}>`
   background-color: ${props => props.inputColor};
   border: none;
   &:hover > div {
-    transform: translateX(20%) translateY(-50%);
+    transform: translateX(10%) translateY(-50%);
   }
 `;
 

@@ -1,19 +1,23 @@
 import React from 'react';
+import {ButtonWrapper, CommonForm, CommonWrapper} from "../../../Main/ui/commonStyles/commonStyles";
+import Input from "../../../Main/ui/common/input";
+import Button from "../../../Main/ui/common/buttons";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  width: 80%;
-  min-height: 40vh;
-  max-height: 80vh;
-  margin: 30px auto;
-  background-color: #F4837D
+const RecoveryWrapper = styled(CommonWrapper)`
+  background-color: #F4837D;
 `;
 
 const Recovery = () => {
     return (
-        <Wrapper>
-
-        </Wrapper>
+        <RecoveryWrapper>
+            <CommonForm>
+                <Input placeholder={'your e-mail'}/>
+                <ButtonWrapper>
+                    <Button color={'#F4837D'} name={'reset password'}/>
+                </ButtonWrapper>
+            </CommonForm>
+        </RecoveryWrapper>
     )
 };
 
